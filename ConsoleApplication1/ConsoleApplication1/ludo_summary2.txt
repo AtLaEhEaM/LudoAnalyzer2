@@ -1,0 +1,28 @@
+Simulated 100000 games
+
+Color Stats:
+Red:
+  Got out first: 32312
+  Won: 23227
+  Got out first AND won: 7890
+  Average: 24.4182
+
+Green:
+  Got out first: 22079
+  Won: 24721
+  Got out first AND won: 5823
+  Average: 26.3735
+
+Blue:
+  Got out first: 18612
+  Won: 22675
+  Got out first AND won: 4517
+  Average: 24.2693
+
+Yellow:
+  Got out first: 26997
+  Won: 29377
+  Got out first AND won: 8570
+  Average: 31.7443
+
+Average number of moves per game: 759.803
