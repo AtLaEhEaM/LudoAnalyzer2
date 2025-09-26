@@ -1,0 +1,40 @@
+org 100h
+
+; Load values into registers
+mov al, 5       ; first number
+mov bl, 7       ; second number
+
+; Subtract BL from AL
+sub al, bl      ; AL = AL - BL
+
+; Conditional jumps based on flags
+jz is_zero      ; if result == 0
+jc carry_set    ; if borrow (carry) occurred
+js negative     ; if result is negative
+
+; If none of the above, print "OTHER"
+mov dx, offset msg_other
+jmp print
+
+is_zero:
+    mov dx, offset msg_zero
+    jmp print
+
+carry_set:
+    mov dx, offset msg_carry
+    jmp print
+
+negative:
+    mov dx, offset msg_negative
+    jmp print
+
+print:
+    mov ah, 9
+    int 21h
+    ret
+
+; Messages
+msg_zero     db 'Result is ZERO$'
+msg_carry    db 'Carry/Borrow occurred$'
+msg_negative db 'Result is NEGATIVE$'
+msg_other    db 'Other case$'
